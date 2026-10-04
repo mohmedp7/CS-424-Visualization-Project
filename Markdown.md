@@ -25,9 +25,12 @@ Are certain categories of clothing consistently sold for higher prices?
 
 How does the type of show affect the price an item sells for?
 
-For this project, one observation is one piece of clothing sold during a Whatnot livestream. We watched streams live on the app from home over about a week and a half. For each item, we recorded the channel name and its follower count, the clothing type, the size, the starting bid, and the ending bid. On streams where it was possible, we also recorded the show format (auction or sudden death), the style (printed, embroidered, or blank), and the position of the brand symbol. We chose these attributes because we thought they could affect what a viewer would bid, and because they were the ones we could capture reliably in the few seconds each item is on screen.
+For this project, one observation is one piece of clothing sold during a Whatnot livestream. We collected the data manually by watching streams on the app from home over about a week and a half, across multiple days. We found no public API we could use, so instead of watching as normal viewers, we recorded each item's details as it was auctioned, in a shared Excel spreadsheet that kept all the channels together. For each item we recorded the channel name and its follower count, the clothing type, the size, the starting bid, and the ending bid. On streams where it was possible, we also recorded the show format (auction or sudden death), the style (printed, embroidered, or blank), and the position of the brand symbol. We chose these attributes because we thought they could affect what a viewer would bid, and because they were the ones we could capture reliably in the few seconds each item is on screen.
 
-To capture meaningful variation rather than a single snapshot, we deliberately watched streams that sold different things. One stream mostly sold Nike, another mostly Carhartt, and others sold a mix, so the data covers different clothing types, sizes, price levels, and sellers. We first planned to watch just one auctioneer, but realized that its regular viewers might know what to look for, which would make prices reflect one community and not the app more broadly (bias), so we spread our viewing across several auctioneers. To keep our recording consistent, we watched one stream together first to agree on how to record each attribute, then each watched multiple streams on our own. One part of our collection that we failed to capture was brand. This was because it was rarely named and auctioneers moved on within seconds, so we dropped it.
+To capture meaningful variation rather than a single snapshot, we deliberately watched different kinds of streams: sweaters, jackets, Carhartt, Nike and other sports, and mixed-brand shows, across channels of different sizes. This kept the clothing varied while still related enough that items could be grouped and compared, without every item being unique. We first planned to watch a single auctioneer but realized that its regular viewers might know what to look for, which would make prices reflect one community and bias the data, so we spread our viewing across several auctioneers. To record consistently, we watched one stream together first to agree on how to record each attribute, then each watched multiple streams on our own. Many items were hard to classify, for example hoodies and jackets with full or half zippers, or jacket-style material without a hood. We made some arbitrary decisions to keep the number of types small while still covering every item sold, and we applied them the same way throughout.
+
+Our process has limits. We wanted to record brand, but it was rarely named and auctioneers moved on within seconds, so we dropped it.
+
 
 ### Initial Data Dictionary
 
@@ -45,6 +48,13 @@ To capture meaningful variation rather than a single snapshot, we deliberately w
 # Task 2: Pilot and data collection
 
 When we first started collecting the data and recording our attributes, we found that it was hard because of the speed some of the auctioneers were going. It definitely took a couple tries to collect all the attributes we wanted in the time frame that one piece of clothing was shown. One observation that was difficult to classify was the type of clothing. This was because it wasn’t mentioned half the time what kind of clothes it was. Additionally, if the auctioneer did mention what type of clothing it was, we believed it was actually something else. An example we can give is a hoodie with a zipper that the auctioneer said was just a hoodie. In order to keep everything consistent and concise,what we did was that we classified the piece of clothing to what we believed it was regardless of what the auctioneer said. We both had a general idea of what we wanted for this assignment so we did not have any different interpretations of attributes. An attribute that we wanted was brand. However it was very hard to figure out what brand each piece of clothing actually was. In the end we decided to remove that attribute. Every attribute we planned on adding was necessary except for brand. After doing the pilot, we realized we could answer a question that we previously did not think about. That question was “How does the number of viewers affect the final selling price of an item?” Because of the pilot, we are adding additional attributes (show title and bid type).
+
+Below is the 10 data points we collected for the pilot.
+
+<img width="423" height="262" alt="image" src="https://github.com/user-attachments/assets/ec47b8a0-5a30-4480-b1c6-ccf6e76146e5" />
+
+
+
 
 ### Revised Data Dictionary
 
