@@ -3,6 +3,12 @@
 #### Aidan Pina
 #### Mohmed Patel
 
+Link to initial data: https://uic365-my.sharepoint.com/:x:/r/personal/apina7_uic_edu/Documents/Whatnot%20Data.xlsx?d=w643c64c234304fdf989e247596b9325a&csf=1&web=1&e=Uji5XW
+
+Link to refined data: https://uic365-my.sharepoint.com/:x:/r/personal/apina7_uic_edu/Documents/Whatnot%20Data%20Refined.xlsx?d=wc1b4ad9f044f45ee90a6eb9c314ed2f5&csf=1&web=1&e=dcZB0N
+
+
+
 # Task 1: Observation and data collection plan
 
 We decided to do data collection of an online auctioning app where people/companies will livestream and show the camera items/objects and people will be allowed to bid on them against others. We found this interesting because we enjoy thrifting vintage clothes and checking out big events like ThriftCon, IllinoisVintageFest, and Thrift2Death. So being able to buy thrifted clothing or other items online allows us to do one of our hobbies from the comfort of our own home without any drawbacks. We also have a lot of experience buying from the app over the past year and have spent more money than we should have.
@@ -59,7 +65,7 @@ When we first started collecting the data and recording our attributes, we found
 
 The dataset we collected is done per channel/livestream currently and is split by stream. All the streams watched and collected were clothing streams but they varied by type whether it was jackets, sweaters, or pants and there were also subtypes included. Each stream varied by size and length of the show but all attributes were applicable across all streams. This includes size of clothing (Categorical), stream name (Categorical), style (Categorical), clothing type (Categorical), starting bid (Quantitative), and ending bid (Quantitative). Overall everything was tough to record because most shows run items on a timer meaning we had only a few seconds to either remember or record all attributes while also monitoring several things per frame. This means that individual brands per show are unrealistic to record unless the shows themselves state the brand for the viewers.
 
-During the streams we chose to capture size, stream title, style, clothing type, starting bid, and ending bid while we lost individual brand information, wear level/flaws, comments/activity, and prebid information on items that were prelisted. We decided making an item its own individual row was most appropriate especially for later visualization use since it would be easier to create graphs and charts if the data was easily split by shows or some other metric that repeats often. We chose to record everything the way it was displayed in the app so the starting/ending bid stayed quantitative/numerical since they were dollar amounts while everything else like style, type, size were categorical strings that could be abbreviated or easily typed.
+During the streams we chose to capture size, stream title, style, clothing type, starting bid, and ending bid while we lost individual brand information, wear level/flaws, comments/activity, and pre-bid information on items that were prelisted. We decided making an item its own individual row was most appropriate especially for later visualization use since it would be easier to create graphs and charts if the data was easily split by shows or some other metric that repeats often. We chose to record everything the way it was displayed in the app so the starting/ending bid stayed quantitative/numerical since they were dollar amounts while everything else like style, type, size were categorical strings that could be abbreviated or easily typed. After about 1 and a half weeks of data collection, we recorded 310 items over 5 streams. 
 
 
 Based on the data’s current state the most plausible domain questions would be:
