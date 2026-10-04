@@ -87,74 +87,71 @@ Translating the original and refined domain questions into abstract tasks helped
 
 
 
+<img width="621" height="189" alt="image" src="https://github.com/user-attachments/assets/b92a47d1-398c-43d0-99b3-2e8b5b996390" />
 
-## Emphasis
+We wanted to create a visualization that shows many types and size combinations.  It addresses the question about whether certain categories sell for higher prices. This visual is a heatmap with clothing type as rows and size as columns (note that these are not all the clothing types for example purposes). Each cell shade shows the average ending bid with a lower bid being a lighter color and a higher bid being a darker color. The marks are areas (cells) and the channel is color. We believe it’s good for scanning areas of interest across each combination. Right now it’s hard to show the lighter and darker colors so if we do code this it’ll look a lot better. We also realize that a certain combination might have only 1 item that meets that criteria which could skew the results. We will refine this one so it shows the number of items of each combination. This differs from our other sketches by showing 2 categorical attributes and it also being a heatmap. 
 
-*This text will be italic*  
-_This will also be italic_
 
-**This text will be bold**  
-__This will also be bold__
+<img width="458" height="341" alt="image" src="https://github.com/user-attachments/assets/cf4517a3-8af7-46a8-93b4-4f6a706a040a" />
 
-_You **can** combine them_
+We wanted to create a simple sketch that could answer which categories sell higher. Each bar is one clothing type. The bar lengths show an average ending bid from $0 to max. The marks are lines and the channels are vertical length and horizontal position. What worked well was that it’s easy to read and shows a quick rank. It might not work well because it is not that informative and it doesn’t show how many items are in each category. It's different from our other sketches because it gives one number per category and it is a bar chart. 
 
-## Lists
+<img width="623" height="371" alt="image" src="https://github.com/user-attachments/assets/3fb243ec-0147-4d82-af09-e1b9d5482939" />
 
-### Unordered
+This sketch was motivated by us wanting to know the difference between auction and sudden death. It answers our domain question about how the type of show affects price. The y-axis is the average ending bid and our x-axis is split into 2 groups: Auction and Sudden death. Each dot is one stream. The marks are the point and the channels are vertical position and color. What this does well is that it could clearly tell us if auction or sudden death format streams have better bids. What doesn’t really work/ a problem is that we don’t have many points (currently working towards watching more streams and adding to this visualization). This is different from other sketches because it compares directly with other streams instead of items. 
 
-* Item 1
-* Item 2
-* Item 2a
-* Item 2b
-    * Item 3a
-    * Item 3b
+<img width="622" height="496" alt="image" src="https://github.com/user-attachments/assets/2cb8ec5a-641a-4b0f-af73-09fe59fce3b5" />
 
-### Ordered
+Our motivation for this visualization was that we wanted to see the amount bidded as a show goes on and see if an auctioneer leaves the best for last and also if the stream being auction or sudden death relates to it. This visual relates to our domain question on how the type of show affects price. The x-axis shows each item from beginning to end (this is how we recorded the information so we think it’s possible). The y-axis is the ending bid. The mark is the line and the channels are vertical and horizontal positions. What works well is that it is good at showing the overall direction of bids as the show goes on. What doesn’t work well is that this only shows one line (which is one stream) which is limited and doesn’t give us a lot of information (we will refine this one). It differs from the other sketches by it showing a trend over time which we didn’t really do with the others. 
 
-1. Item 1
-2. Item 2
-3. Item 3
-    1. Item 3a
-    2. Item 3b
+<img width="623" height="439" alt="image" src="https://github.com/user-attachments/assets/93005acf-15f9-4b9c-b300-381b0bb4c64b" />
 
-## Images
+This visualization was motivated by us wanting to see if clothes starting at different bids made a difference to its final price. This visual relates to our domain question of starting vs final price. The x-axis groups items by starting bid and each boxplot shows the spread of ending bids for that group. The marks are boxes and the channels are horizontal and vertical positions. It works well by potentially showing that items with similar starting bids can end up at very different prices. What doesn’t work well is that we don’t have anything that shows the number of items for each boxplot and we only have a few starting bids (working on finding more and getting more variety into this visual). This differs from other sketches because it shows boxplots (distributions). 
 
-![This is an alt text]("C:\Users\mohme\OneDrive\Pictures\Screenshot 2026-10-03 211804.png" "")
-![alt text for screen readers](/path/to/image.png "Text to show on mouseover")
 
-## Links
+<img width="624" height="331" alt="image" src="https://github.com/user-attachments/assets/20cfa3fe-0ea7-44c5-8f99-c4afd220e878" />
 
-You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
+We wanted to see which style comes with which type to answer our domain question of which  types/styles of items receive the most bids. Each bar is a clothing type with the length of the bar showing how many items total each type has. Additionally each bar is split into printed, embroidered, and blank. The amount shaded in shows how many items of a particular clothing type has that style. The marks are the bars with the channels being the length and color. What worked well is that this visualization shows how items are distributed clearly. However this graph does seem pretty limiting so hopefully we can fix that as we work on this project more. As mentioned before this sketch is different from others by showing how style (print, embroidered, and blank) are distributed which we haven’t shown in other visualizations. 
 
-## Blockquotes
+### Refined Sketches
 
-> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
->
->> Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+After discussing each visualization, we decided to refine our heatmap and line chart.
 
-## Tables
+<img width="621" height="191" alt="image" src="https://github.com/user-attachments/assets/f4d96aa1-48e5-4c75-a24f-fced4162509e" />
 
-| Left columns  | Right columns |
-| ------------- |:-------------:|
-| left foo      | right foo     |
-| left bar      | right bar     |
-| left baz      | right baz     |
+For the refined heat map, it still addresses the question about whether certain categories sell for higher prices. The only difference is that now for each cell we included the count of each item. The attributes used in this visualization are clothing type, size, average ending bid, and count of items in each cell. The marks are cells and the channels are vertical/horizontal position and color. What we want someone to learn with this refinement is for example a dark cell with a count of 1 or 2 tells us the bid is based on very little data, while a dark cell with a count of 15 is much more trustworthy. From this visualization, someone should be able to see which clothing types and sizes sell for the most, judge how reliable each cell is, and notice gaps in our data.  
 
-## Blocks of code
+<img width="624" height="250" alt="image" src="https://github.com/user-attachments/assets/253046a9-a4fd-4afb-8045-6198ec18ea75" />
 
-```
-let message = 'Hello world';
-alert(message);
-```
+For our refined line chart, we updated the original single-line chart into a multi-line chart that compares the two show formats. This addresses our question about how the type of show affects the price an item sells for. The attributes used are item order within a stream on the x-axis, ending bid on the y-axis, and stream format. Each line represents one stream, and its color shows the format: red for auction and blue for sudden death. The marks are lines, and the channels are vertical/horizontal position and color. Adding all the streams makes it very easy to compare against auction vs auction, sudden death vs sudden death, and auction vs sudden death. Someone using this visualization could learn whether prices climb as a show goes on, whether one format reaches a higher ceiling, and how much variation there is between streams of the same format. 
 
-## Mermaid diagrams
-```mermaid
-graph TD
-  A[Start] --> B{Decision}
-  B -->|Yes| C[Finish]
-  B -->|No| D[Alternate]
-```
 
-## Inline code
+# Task 6: Summarizing
 
-This web site is using `markedjs/marked`.
+Our domain questions in task 3 were as follows:
+
+* What types/styles of items receive the most bids?
+
+* How does an item's starting price relate to its final selling price?
+
+* Are certain categories of clothing consistently sold for higher prices?
+
+* How does the type of show affect the price an item sells for?
+
+
+
+The charts we currently have in mind for our visualizations are as follows:
+
+* Heatmap based on size, type, and bid price
+* Barplot based on type and average bid price
+* Scatterplot based on average bid price with auction compared to sudden death
+* Line chart based on final bid price and item number
+* Boxplot comparing summary statistics of varying starting prices
+* Barplot split by clothing type and showing frequency of style
+
+We looked at a lot of options for visualizations, some of which were extremely ambitious at the beginning because we wanted to pack as much information as possible into a singular design. This included charts that contained 6 attributes and all possible cell values where the x axis was the start bid incrementing to the final bid while the y axis was $0 to the highest price recorded while having a line chart split by category of clothing which would have led to over 300 lines in a single chart. That is an idea that needed to be scrapped due to it being visual clutter and data vomit with no real story telling. So we shifted our attention to less is more and thought of valuable attributes and trends we could display that would provide more thoughtful insight while maintaining a digestible visual. This brought the majority of our current chart ideas like a line chart representative of the trendline showing if final bid price increases or decreases the more items that are sold or the scatterplot that simply places average bid price on a grid comparing auction style shows to sudden death style shows. That shift in ideas also sparked other methods of displaying old goals, the heat map was a more probable method of displaying the majority of available data in one visualization because it includes most attributes while still being easy to understand and follow. That tedious process also led to the large variety we have within our design options with some other sample ones we have on hold because these current few visualizations can cover all domain questions quite well. We have comparisons for Sudden Death vs Auction, graphs grouped by clothes category to explore price distribution, and a large selection/frequency of clothes styles/types to recognize patterns in buyers and sellers. Our domain questions and design ideas are quite strong because they cover all domain aspects while also not being repetitive graphs but unfortunately there is some overlap between visualization ideas. That is a weakness of our design ideas because overlap means less exploration and data usage but it is also due to a weakness of the data collected. Our data doesn't contain brands or wear/flaws which could be crucial to price patterns or buyer patterns and if our data was able to include that then more visualizations would be possible as well as our current ones being able to provide more insight about what drives the prices in these shows.
+
+
+# Task 7: Collaboration process
+
+Our group is only 2 people so communication and collaboration was extremely easy, communication was handled simply over text. When the assignment was released at first we came up with a plan to divide and collect the data by watching the livestreams we would normally watch but instead of just buying and watching as usual we would also be recording the data necessary. We each watched a few streams and only recorded the ones that we believed could hold value and keep the data consistent which was vintage clothing. We used the same categorization system and guidelines to put certain items in certain boxes when things were vague or ambiguous when auctioned off. In terms of collaboration on the github and sketches/artifacts, we completed the sketches together in person since they needed to be hand drawn and did all task related work together over a discord call using google docs. We unfortunately did not realize that in the deliverables it is stated to use github to keep track of collaboration and contributions until we had already finished everything and were ready to convert it to a markdown and submit. All tasks and contributions were done equally and in any of the areas where someone did more work, the other would take on more work in a different area to even the difference. This included the odd number of tasks and the odd number of tables in the data collection. Throughout the process of our collaboration we faced no challenges and managed to compromise or agree on the distribution of work and decisions of meetings. This also includes collaboration prior to starting the project documents like brainstorming potential data ideas, interests in common, and possible visualization goals.
