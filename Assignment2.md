@@ -81,10 +81,16 @@ We decided to keep our first direction (heatmap) as a single static view. All th
 
 
 <img width="543" height="352" alt="image" src="https://github.com/user-attachments/assets/d45c89da-b42f-4647-a2dc-576af6883001" />
+
+
 (color by stream with dashes)
 
 
+
+
 <img width="784" height="368" alt="image" src="https://github.com/user-attachments/assets/04d93fdd-df88-4dd3-9f75-a4226e7ed2e8" />
+
+
 (small multiple views for each stream)
 
 
@@ -98,10 +104,14 @@ We chose to iterate and refine our second direction. The first iteration we did 
 The second iteration we decided to do was to make it a multiple view. This is because even with size, a stream average hides how spread out the prices are, and it is pulled up by a few expensive items, as we saw in Task 3. We added a boxplot of all items grouped by show format next to the dots, so the median, spread and outliers are visible. We chose a second view over a new encoding because the two views answer different parts of the question. The dots show how streams compare with each other and which stream a result comes from, while the boxplot shows how individual item prices are spread within each bid type. One other tiny refinement we did that we mentioned in task 4 was that we removed pants from the heatmap, since we concluded they use a different size system (they still appear in our other visualizations). 
 
 <img width="272" height="376" alt="image" src="https://github.com/user-attachments/assets/50ddba80-d04e-4e7c-9dcd-666c79d9ecd7" />
+
+
 Refined visual for direction 2
 
 
+
 <img width="337" height="238" alt="image" src="https://github.com/user-attachments/assets/426adfed-2b0e-4185-90a8-057dd3eb2b08" />
+
 
 Refined visual for heat map
 
