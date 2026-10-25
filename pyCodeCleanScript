@@ -1,0 +1,134 @@
+
+import pandas as pd
+from google.colab import files
+
+
+# load data
+df = pd.read_csv("WhatnotDataRefined1023.csv")
+
+print("Original dataset shape:", df.shape)
+
+# Clean column names
+df.columns = df.columns.astype(str).str.strip()
+df = df.dropna(axis=1, how="all")
+
+# Remove leftover unnamed columns
+df = df.loc[
+    :,
+    ~df.columns.str.contains(r"^Unnamed", case=False)
+]
+#rows
+df = df.dropna(how="all").copy()
+
+# whitespace
+for col in df.select_dtypes(include=["object", "string"]).columns:
+    df[col] = df[col].str.strip()
+
+
+df = df.replace(r"^\s*$", pd.NA, regex=True)
+
+# numeric bids
+for col in ["Starting Bid", "Ending Bid"]:
+    df[col] = pd.to_numeric(df[col], errors="coerce")
+
+# style standardization
+df["Style"] = df["Style"].str.upper()
+
+# bid type standardization
+df["Bid Type"] = df["Bid Type"].str.strip().str.lower()
+df["Bid Type"] = df["Bid Type"].replace({
+    "auction": "Auction",
+    "sd": "SD"
+})
+
+# clothing type standardization
+df["Type"] = df["Type"].str.strip().str.lower()
+
+type_mapping = {
+    "crew": "Crewneck",
+    "crewneck": "Crewneck",
+    "crew neck": "Crewneck",
+
+    "quarterzip": "zipup",
+    "quarter zip": "zipup",
+    "quarter-zip": "zipup",
+
+    "zipup hoodie": "hoodie",
+    "zip up hoodie": "hoodie",
+    "zip-up hoodie": "hoodie",
+
+    "joggers": "pants",
+    "shorts": "pants"
+}
+
+df["Type"] = df["Type"].replace(type_mapping)
+
+# zipup standardization
+quarterzip_mask = df["Type"].str.contains(
+    r"quarter[\s-]*zip", case=False, na=False
+)
+df.loc[quarterzip_mask, "Type"] = "zipup"
+
+# jacket standardization
+is_varsity = df["Type"].str.contains(
+    "varsity", case=False, na=False
+)
+
+contains_jacket = df["Type"].str.contains(
+    "jacket", case=False, na=False
+)
+
+contains_detroit = df["Type"].str.contains(
+    "detroit", case=False, na=False
+)
+
+jacket_mask = is_varsity | contains_jacket | contains_detroit
+df.loc[jacket_mask, "Type"] = "Jacket"
+
+# capitalize the first letter of every clothing type
+df["Type"] = df["Type"].str.capitalize()
+
+# wear and stain standardization
+for col in ["Wear", "Stainage"]:
+    df[col] = df[col].str.strip().str.lower()
+
+# size needs to be text
+df["Size"] = df["Size"].astype("string").str.strip()
+
+# for review:
+print("\nMissing values per column:")
+print(df.isna().sum())
+
+print("\nNegative bid records:")
+print(df[
+    (df["Starting Bid"] < 0) |
+    (df["Ending Bid"] < 0)
+])
+
+print("\nEnding bids above $100:")
+print(df[df["Ending Bid"] > 100])
+
+# Check for exact duplicate rows
+print("\nExact duplicate rows:", df.duplicated().sum())
+
+# Display standardized clothing types and counts
+print("\nStandardized clothing types:")
+print(df["Type"].value_counts(dropna=False))
+
+print(
+    "\nTotal entries labeled Jacket:",
+    (df["Type"] == "Jacket").sum()
+)
+
+
+
+
+
+print("\nColumn names:")
+print(df.columns.tolist())
+
+
+output_file = "/content/whatnot_data_cleaned23232.csv"
+df.to_csv(output_file, index=False)
+
+files.download(output_file)
