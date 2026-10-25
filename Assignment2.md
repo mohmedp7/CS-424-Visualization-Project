@@ -137,6 +137,11 @@ Refined visual for heat map
 
 # Task 7 Current Design
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/04d93fdd-df88-4dd3-9f75-a4226e7ed2e8" width="45%" />
+  <img src="https://github.com/user-attachments/assets/50ddba80-d04e-4e7c-9dcd-666c79d9ecd7" width="22%" />
+  <img src="https://github.com/user-attachments/assets/426adfed-2b0e-4185-90a8-057dd3eb2b08" width="27%" />
+</div>
 
 - What questions and tasks it supports.
 Each visualization tackles a separate portion of our domain questions in order to have the most coverage possible while also having minimal overlap. The goal of the visualizations is to have the best overall exploration of our data and find new avenues or reasonings for explaining the Whatnot economy. Our heatmap explores the frequency of sizes per type of clothing and seeing if they impact average ending bid. The second visualization represents the exploration of Auction and Sudden Death to see how prices vary. The line chart is a measurement of time with a focus on whether ending bids increase or decrease as a show progresses.
