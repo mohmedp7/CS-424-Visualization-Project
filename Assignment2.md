@@ -48,9 +48,29 @@ The script also checks the cleaned data for missing values and negative bids in 
 
 We did a lot of simple analysis in task 2 because we believed it was important to do but not valuable to show in task 3. The first thing we looked at was how ending bids are distributed. Across the 530 items that had ending bids, the median was $14 and the mean was $19. We can also see that there are few expensive items so assume that they brought up the average. The items that did not sell were given an ending bid of $0 to account for failed auctions which will help when calculating the average revenue per item listed. This will allow us to compare categories based on both the prices of sold items and items that failed to sell.
 
+<img width="359" height="516" alt="image" src="https://github.com/user-attachments/assets/e9a4d30e-e37b-4082-a460-a0ab7d30e9cf" />
+
+
 Next we compared streams with a boxplot per stream. Prices vary a lot: the Mrtop Carhartt show has a median of roughly $45 and reaches $180, while the yfvtg VTG Sweater show sits mostly under $10. Overall, sudden death items sell for more than auction items (a median of roughly $20 versus $10). This doesn’t hold for every stream, though. The Mrtop Premium Nike show (sudden death) is lower than the yfvtg $8 Workwear Pants show (auction). A streams average can also hide how many items sit behind it, which we look at in Task 4. We also recorded only 2 auction streams compared to 4 sudden death streams, so we can’t draw strong conclusions about format yet.
 
+<img width="561" height="158" alt="image" src="https://github.com/user-attachments/assets/5d378988-458c-4a5c-b139-7d446e64c8d5" />
+
+
 We then used a dropdown boxplot to compare clothing types with the ending bid. For all of the comparison types we did (Wear, Stainage, Size, Style, Type, and Bid Type) all of them except one had pretty normal results with each boxplot being similar. For type specifically, we can see that Jacket stands out. Their median is around $60 while every other type has a median under around $25. We didn’t expect type to matter that much so we were a bit surprised. Moreover, this is based on only 27 jackets. Looking closely, we can see that 4 out of the 5 items that are over $100 are jackets. This is most likely the reason why the average is so high compared to the others. The median is high because most jackets overall sold for more. 
+
+<img width="166" height="397" alt="image" src="https://github.com/user-attachments/assets/934a34d8-be29-4b44-af0b-87f4dda3756a" />
+<img width="170" height="397" alt="image" src="https://github.com/user-attachments/assets/79ce73e5-00e3-4430-9334-8ac2b593a9fb" />
+<img width="169" height="370" alt="image" src="https://github.com/user-attachments/assets/a5ec3b2b-b2c2-4af8-a9d7-28ab72904e7e" />
+<img width="173" height="387" alt="image" src="https://github.com/user-attachments/assets/04026d47-7996-4011-9ef5-756f500ec3a7" />
+<img width="259" height="412" alt="image" src="https://github.com/user-attachments/assets/c5c55523-4982-40c5-966b-deea02b62595" />
+<img width="1293" height="380" alt="image" src="https://github.com/user-attachments/assets/85d5a9f5-f2e8-4c2b-8a74-4ba64c5cb1c4" />
+
+
+
+
+
+
+
 
 
 # Task 4: Implement visualization alternatives
