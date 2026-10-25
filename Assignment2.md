@@ -38,7 +38,7 @@ We implemented a data cleaning process that was relatively simple in Python usin
 
 This code also did the standardization of categorical attributes that we discussed needed to happen in order to keep the data consistent and concise. This fix includes things like capitalization, spacing, and terminology. For example, variations of crewneck as an entry were grouped, zipup hoodies were classified as just hoodies, and any variations of jacket types were just labeled together as jackets. Joggers and shorts were too sparse in the dataset so we took a handful of entries and put them with pants. Style, bid type, wear, and stain labels were also standardized to make grouping and comparison easier. These transformations are reproducible and allow items with intentionally grouped descriptions to be analyzed together rather than be treated as separate unrelated entries/categories simply due to a difference in original recording.
 
-The script also checks the cleaned data for missing values and negative bids in order to validate that there are no issues or improper values like an item selling for negative money. There is also a distinct count of clothing types in order to see whether the standardization of clothing types was properly done. There is a final and separate check that looks for exact duplicate rows which normally would be important in most other datasets however for ours in particular there will likely always be duplicates considering there is no unique key in our dataset like an ID number, tag number, or unique identifier. So many rows may be exactly the same but they will always represent a unique item being auctioned. These checks are to properly validate if the data is ready for visualizations. We will use the final cleaned data csv in order to create the visualizations in future tasks. 
+The script also checks the cleaned data for missing values and negative bids in order to validate that there are no issues or improper values like an item selling for negative money. One major decision we made for this cleaned data was to keep the auctioned items that did not sell. These items were represented with their normal starting bid but recorded with an ending bid of 0. The reason we chose this instead of cleaning and removing it with the cleaning script is because we'd like to include it to allow ourselves an extra avenue to explore. By keeping the items that didn't sell in our data we are able to remove them and explore averages per item sold and then by keeping them we are able to explore averages per item auctioned. So we are allowed to pick and choose as we see fit for what might help our visualizations the most. There is always a chance to remove the 0s later if we believe they don't add necessary value. There is also a distinct count of clothing types in order to see whether the standardization of clothing types was properly done. There is a final and separate check that looks for exact duplicate rows which normally would be important in most other datasets however for ours in particular there will likely always be duplicates considering there is no unique key in our dataset like an ID number, tag number, or unique identifier. So many rows may be exactly the same but they will always represent a unique item being auctioned. These checks are to properly validate if the data is ready for visualizations. We will use the final cleaned data csv in order to create the visualizations in future tasks. 
 
 
 
@@ -134,6 +134,27 @@ Refined visual for direction 2
 
 
 Refined visual for heat map
+
+# Task 7 Current Design
+
+
+- What questions and tasks it supports.
+Each visualization tackles a separate portion of our domain questions in order to have the most coverage possible while also having minimal overlap. The goal of the visualizations is to have the best overall exploration of our data and find new avenues or reasonings for explaining the Whatnot economy. Our heatmap explores the frequency of sizes per type of clothing and seeing if they impact average ending bid. The second visualization represents the exploration of Auction and Sudden Death to see how prices vary. The line chart is a measurement of time with a focus on whether ending bids increase or decrease as a show progresses.
+- The main design decisions.
+The heatmap uses color for average ending bids and numbers for item counts while the second visualization is a dot plot that uses a single dot to represent individual shows and having the dot size correspond to the number of items. The line chart used multiple lines to represent the multiple shows and split them by color to represent auction type but we have ideas to represent all shows as one line in their own separate charts.
+- How it differs from your Assignment 1 sketches and earlier implementations.
+The heatmap has had simple changes like a wider color range and including a new clothing type that was recently added. The dot plot now incorporates dot sizes as another method of representation for our data. The line chart will be split up into a multiview visualization to make the graph more digestible and have shows be easily distinguishable from one another.
+- What currently works well.
+The heatmap does a really good job of highlighting expensive clothing categories like jackets while the dot plot compares individual shows to add a second direction of potential analysis. Separate lines in our line chart will make it easier to examine price changes within each show.
+- What you are still unsure about.
+Our biggest limitation that we are concerned about is the lack of shows/data. Regardless of what our visualization may show we are worried that our data may not be enough to draw sufficient conclusions especially based on only having a handful of auctions/SD shows. A secondary concern is the clothing types with less entries like vests or zipups not having reliable averages representative of the clothing type as a whole. 
+- What you would like to evaluate in Assignment 3.
+We'd like to add at least 2 more shows and see whether the current patterns stay the same or if a larger sample size changes things. Also a big improvement would be to see if a multiview line chart is as effective or digestible as we think it would be along with the other visualizations hopefully being easy to understand as well. Our main goal is an efficient but simple visualization of our data and in order to minimize clutter we will have to keep testing stuff out and throwing away what doesn't work if we can't improve upon it.
+
+
+
+
+
 
 
 
