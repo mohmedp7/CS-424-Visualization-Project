@@ -48,7 +48,11 @@ Throughout the evaluations, we recorded each participant's accuracy, individual 
 
 Based on our data, all 10 participants completed all 4 questions with the correct responses. This means that our task accuracy for both static and interactive visualizations is 100%. 
 
+<img width="480" height="182" alt="image" src="https://github.com/user-attachments/assets/85f4b7bf-3882-4099-90b7-6346ff2a73ee" />
+
+
 <img width="896" height="494" alt="image" src="https://github.com/user-attachments/assets/d5f32fd4-c450-4747-a9ad-1adcea740f8f" />
+
 
 <img width="597" height="393" alt="image" src="https://github.com/user-attachments/assets/130b1758-7296-443b-abfc-34fca00bd4aa" />
 
