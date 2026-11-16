@@ -7,7 +7,18 @@
 
 # Task 1: Implementing interaction
 
-The visualization that we decided to use was the trend chart of ending bids by item order for each livestream. This visualization addresses my question of how prices evolve over the course of a stream and how different formats affect it. The static version displays all eight livestream trend lines on a single chart with a color-coded legend showing individual streams and line styles showing stream formats (solid vs. dotted). Because all data is visible at once without manipulation, it serves as a complete, fair baseline where participants can answer any analytical question through visual scanning and legend lookup. The interactive version of this visualization gives it a dropdown filter where the user can select between all sudden death streams, all auction streams, and each stream individually. We believe that this interaction will help answer analytical tasks because it allows users to filter out irrelevant streams (example could be hiding Sudden Death lines when analyzing Auction streams), the interaction reduces visual noise and the amount of lines on the graph, which we expect will improve speed and precision during comparisons and trend-based tasks.
+The visualization that we decided to use was the trend chart of ending bids by item order for each livestream. This visualization addresses my question of how prices evolve over the course of a stream and how different formats affect it. The static version displays all eight livestream trend lines on a single chart with a color-coded legend showing individual streams and line styles showing stream formats (solid vs. dotted). Because all data is visible at once without manipulation, it serves as a complete, fair baseline where participants can answer any analytical question through visual scanning and legend lookup. The interactive version of this visualization gives it a dropdown filter where the user can select between all sudden death streams, all auction streams, or each stream individually. We believe that this interaction will help answer analytical tasks because it allows users to filter out irrelevant streams (example could be hiding Sudden Death lines when analyzing Auction streams), the interaction reduces visual noise and the amount of lines on the graph, which we expect will improve speed and precision during comparisons and trend-based tasks.
+
+Static visualization
+<img width="873" height="431" alt="image" src="https://github.com/user-attachments/assets/1b342e76-7a34-4d30-94de-caa7196c9f5b" />
+
+Examples of interactive visualization 
+<img width="866" height="456" alt="image" src="https://github.com/user-attachments/assets/4d3763d1-9e36-4cf2-94fd-1e7168b02763" />
+<img width="870" height="457" alt="image" src="https://github.com/user-attachments/assets/2efbb2e2-6816-4a58-886d-6098c127ac82" />
+<img width="877" height="468" alt="image" src="https://github.com/user-attachments/assets/4070fd68-19cd-40d5-945f-4cb31816fb4c" />
+
+
+
 
 
 # Task 2: Evaluation design
@@ -72,7 +83,7 @@ In the end, while interactive filtering provided a slight speed advantage on the
 
 ## Task 5: Reflection and Recommendations 
 
-We hypothesized that the interactive chart would be more efficient or useful than a static chart with more visual clutter. However, after reviewing the results and times, there wasn't a noticeable difference in participants' performance, either in accuracy or time. 
+We hypothesized that the interactive chart would be more efficient or useful than a static chart with more visual clutter. However, after reviewing the results and times, there wasn't a noticeable difference in either participants' accuracy or their performance times. 
 But something that isn't reflected in the data is the participants' personal preferences, which was very surprising, seeing as many participants would opt for the dropdown filter option that showed all 8 streams at once regardless of the question asked. 
 A belief going into this was that having an option to split streams and show them based on SD vs Auction would be a good idea to give participants an option to see certain streams based on what the question may ask, but many participants disregarded those options and just clicked the option that essentially created the static chart a second time even after being given interactive options. 
 It is possible that either our questions were not a good set for evaluating the use of this filter, or that our chart wasn't the appropriate one for this filter. It is hard to tell which one is at fault for the uselessness of our filter; however, even with that uncertainty, we do know our static visualization is very strong, since participants opted to use the static option about twice. 
