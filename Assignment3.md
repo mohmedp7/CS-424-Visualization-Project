@@ -34,6 +34,7 @@ Once answers were given and times were recorded I put the time each task took an
 
 ## Task 3: Conducting the Evaluation
 Data: https://github.com/mohmedp7/CS-424-Visualization-Project/blob/main/EvaluationData(Sheet1).csv
+
 The evaluation was conducted with 10 participants, excluding those used in the initial pilot tests. Each participant completed the four analytical tasks using both the static and interactive visualizations following our procedure stated in Task 2.
 
   
